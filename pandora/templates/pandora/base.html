@@ -1,0 +1,43 @@
+{% load staticfiles %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pandora {% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+
+    <link rel="stylesheet" href="{% static 'ajaxuploader/css/fileuploader.css' %}" type="text/css">
+
+    <script src="{% static 'ajaxuploader/js/fileuploader.js' %}"></script>
+    <script src="{% static 'js/jquery-2.1.0.min.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+
+    <script>
+        var CSRF_TOKEN = '{{ csrf_token }}',
+            POST_URL = '{% url 'ajax-upload' %}';
+    </script>
+
+</head>
+
+<body class="dnd">
+
+    {% csrf_token %}
+    <div id="file-uploader">
+        <noscript>
+            <p>Please enable JavaScript to use file uploader.</p>
+        </noscript>
+    </div>
+
+    <div class="main-wrapper">
+        <div>
+            {% block main %}{% endblock %}
+        </div>
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,21 @@
+body {
+    background-color: #e7dfed;
+}
+
+
+html{
+      height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+.dnd {
+    border: 1px solid red;
+}
+
+.dnd.hover {
+    background: tomato;
+}
+
