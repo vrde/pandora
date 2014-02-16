@@ -96,3 +96,5 @@ STATICFILES_DIRS = (
     STATIC_PATH,
 )
 
+UPLOAD_DIR = os.path.join(BASE_DIR, 'uploads')
+
