@@ -3,7 +3,7 @@ from django.db import models
 
 class Item(models.Model):
     filename = models.CharField(max_length=1024, unique=True)
-    dt = models.DateField(auto_now_add=True)
+    dt = models.DateTimeField(auto_now_add=True)
     name = models.CharField(max_length=1024)
     description = models.TextField(null=True)
     mimetype = models.CharField(max_length=255)
@@ -13,3 +13,5 @@ class Item(models.Model):
     def __unicode__(self):
         return self.name
 
+    class Meta:
+        ordering = ['-dt']

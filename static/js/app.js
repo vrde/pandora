@@ -23,9 +23,11 @@ $(function () {
     var uploader = new qq.FileUploader({
         action: POST_URL,
         element: $('#file-uploader')[0],
-        dropZoneElements: [ $('.dnd')[0] ],
+        //dropZoneElements: [ $('.dnd')[0] ],
         multiple: true,
         onComplete: function(id, fileName, responseJSON) {
+            return;
+
             if(responseJSON.success) {
                 alert("success!");
             } else {
@@ -33,9 +35,10 @@ $(function () {
             }
         },
         onAllComplete: function(uploads) {
+            window.location.reload();
             // uploads is an array of maps
             // the maps look like this: {file: FileObject, response: JSONServerResponse}
-            alert("All complete!");
+            // alert("All complete!");
         },
         params: {
             'csrf_token': CSRF_TOKEN,

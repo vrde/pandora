@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
 
     'ajaxuploader',
 
@@ -96,5 +97,5 @@ STATICFILES_DIRS = (
     STATIC_PATH,
 )
 
-UPLOAD_DIR = os.path.join(BASE_DIR, 'uploads')
+UPLOAD_PATH = os.path.join(BASE_DIR, 'uploads')
 

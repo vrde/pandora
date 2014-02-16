@@ -2,20 +2,15 @@ body {
     background-color: #e7dfed;
 }
 
-
-html{
-      height: 100%;
+.qq-upload-button {
+    width: 100%;
 }
 
-body {
-    min-height: 100%;
+.qq-upload-drop-area {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.7;
 }
-
-.dnd {
-    border: 1px solid red;
-}
-
-.dnd.hover {
-    background: tomato;
-}
-

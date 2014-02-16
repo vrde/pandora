@@ -1,4 +1,16 @@
 {% extends 'pandora/base.html' %}
+{% load humanize %}
 
 {% block main %}
+
+<ul>
+{% for item in items %}
+    <li>
+    {{ item.dt|naturaltime}}
+    <a href="/uploads/{{ item.filename }}">{{ item.name }}</a>, {{ item.mimetype }}, {{ item.size }}
+
+    </li>
+{% endfor %}
+</ul>
+
 {% endblock %}

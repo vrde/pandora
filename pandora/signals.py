@@ -29,7 +29,7 @@ def update_database_on_upload(sender, request, filename, *args, **kwargs):
     models.Item.objects.create(
         filename=filename,
         mimetype=guess_mimetype(filename),
-        size=get_size(os.path.join(settings.UPLOAD_DIR, filename)),
+        size=get_size(os.path.join(settings.UPLOAD_PATH, filename)),
         name=get_name(filename),
         ip_address=get_client_ip(request))
 
