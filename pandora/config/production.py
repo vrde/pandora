@@ -5,7 +5,7 @@ DEBUG = False
 
 TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 DATABASES = {
@@ -18,5 +18,6 @@ DATABASES = {
     }
 }
 
+STATIC_ROOT = '/webapps/pandora/static'
 UPLOAD_PATH = '/webapps/pandora/uploads'
 
